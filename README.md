@@ -1,3 +1,6 @@
+# P5Tycoon
+This is my attempt to recreate Persona 5 Royal's card game called tycoon.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
