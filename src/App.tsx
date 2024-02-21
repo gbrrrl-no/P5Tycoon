@@ -1,30 +1,37 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Root from "./pages/Root";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="h-svh w-full bg-slate-50 p-12 dark:bg-stone-900">
+      <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center overflow-hidden">
+        <div className="flex w-[108rem] flex-none justify-end">
+          <picture>
+            <source
+              srcSet="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif"
+              type="image/avif"
+            />
+            <img
+              src="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif"
+              alt=""
+              className="w-[71.75rem] max-w-none flex-none dark:hidden"
+              decoding="async"
+            />
+          </picture>
+          <picture>
+            <source srcSet="https://tailwindcss.com/_next/static/media/docs-dark@30.1a9f8cbf.avif" />
+            <img
+              src="https://tailwindcss.com/_next/static/media/docs-dark@30.1a9f8cbf.avif"
+              alt=""
+              className="hidden w-[90rem] max-w-none flex-none dark:block"
+              decoding="async"
+            />
+          </picture>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="z-10 h-full w-full rounded-xl border-2 border-slate-600/20 bg-white/5 shadow backdrop-blur-xl">
+        <Root />
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    </div>
   );
 }
 
